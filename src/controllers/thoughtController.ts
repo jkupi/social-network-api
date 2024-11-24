@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { User } from "../models/User";
-import { Thought } from "../models/Thought";
+import { User } from "../models/User.js";
+import { Thought } from "../models/Thought.js";
 
 // Get all thoughts
 export const getThoughts = async (_req: Request, res: Response) => {
@@ -57,7 +57,7 @@ export const updateThought = async (req: Request, res: Response) => {
 // Delete a thought
 export const deleteThought = async (req: Request, res: Response) => {
   try {
-    const thought = await Thought.findByIdAndUpdate(req.params.id);
+    const thought = await Thought.findByIdAndDelete(req.params.id);
     if (!thought) {
         res.status(400).json({ message: 'thought not found' });
     }

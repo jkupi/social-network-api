@@ -1,5 +1,5 @@
-import mongoose, { Schema, Document, Types } from "mongoose";
-import ReactionSchema, { IReaction } from "./Reaction";
+import mongoose, { Schema, Document } from "mongoose";
+import ReactionSchema, { IReaction } from "./Reaction.js";
 
 export interface IThought extends Document {
   thoughtText: string;

@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import { User } from "../models/User";
-import { Thought } from "../models/Thought";
+import { User } from "../models/User.js";
+import { Thought } from "../models/Thought.js";
 
 const seedData = async () => {
   try {
