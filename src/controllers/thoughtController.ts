@@ -3,7 +3,7 @@ import { User } from "../models/User";
 import { Thought } from "../models/Thought";
 
 // Get all thoughts
-export const getThoughts = async (req: Request, res: Response) => {
+export const getThoughts = async (_req: Request, res: Response) => {
   try {
     const thoughts = await Thought.find();
     res.status(200).json(thoughts);
